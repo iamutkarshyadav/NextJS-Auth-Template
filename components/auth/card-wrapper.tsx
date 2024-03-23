@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import {
     Card,
@@ -18,6 +18,7 @@ interface CardWrapperProps {
     backButtonHref: string;
     showSocial?: boolean;
 }
+
 export const CardWrapper = ({
     children, 
     headerLabel, 
@@ -25,13 +26,11 @@ export const CardWrapper = ({
     backButtonHref, 
     showSocial
 }: CardWrapperProps) => {
-
     return (
         <Card className="w-[400px] shadow-md">
-            
             <CardHeader>
                 <Header
-                    label = {headerLabel}
+                    label={headerLabel}
                 />
             </CardHeader>
             <CardContent>
@@ -40,16 +39,15 @@ export const CardWrapper = ({
             {showSocial && (
                 <CardFooter>
                     <Social/>
-               </CardFooter> 
+                </CardFooter> 
             )}
             <CardHeader>
                 <BackButton
-                    label = {backButtonLabel}
-                    href = {backButtonHref}
+                    label={backButtonLabel}
+                    href={backButtonHref}
                 />
             </CardHeader>
         </Card>
-    )
-}
-
+    );
+};
 
